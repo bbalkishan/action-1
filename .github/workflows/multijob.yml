@@ -13,7 +13,7 @@ jobs:
             - name: upload artifacts
               uses: actions/upload-artifact@v4
               with:
-                name: 
+                name: dragon-file.txt
                 path: dragon.txt      
     test-job2:
         needs: build-job1
@@ -22,8 +22,8 @@ jobs:
             - name: download artifacts
               uses: actions/download-artifact@v5
               with:
-                name: 
-                path: dragon.txt  
+                name: dragon-file.txt 
+                  
             - name: test file exist
               run: grep -i dragon "dragon.txt"
 
@@ -34,8 +34,8 @@ jobs:
             - name: download artifacts
               uses: actions/download-artifact@v5
               with:
-                name: 
-                path: dragon.txt  
+                name: dragon-file.txt 
+                  
             - name: Read File
               run: cat dragon.txt
             - name: deploy
