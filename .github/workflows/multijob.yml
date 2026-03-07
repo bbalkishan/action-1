@@ -3,6 +3,7 @@ on:
   -  push 
 jobs:
     build-job1:
+        
         runs-on: ubuntu-latest
         steps:
             - name: install cowsay program
@@ -12,6 +13,7 @@ jobs:
             - name: sleep for 30 seconds
               run: sleep 30
     test-job2:
+        needs: build-job1
         runs-on: ubuntu-latest
         steps:
             - name: sleep for 10 seconds
@@ -20,6 +22,7 @@ jobs:
               run: grep -i dragon "dragon.txt"
 
     deploy-job3:
+        needs: test-job2
         runs-on: ubuntu-latest
         steps:
             - name: Read File
