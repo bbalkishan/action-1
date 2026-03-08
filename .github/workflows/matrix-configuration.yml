@@ -11,7 +11,9 @@ jobs:
             exclude:
                 - images: alpine
                   os: windows-latest 
-
+            include:
+                - images: amd-64/alpine
+                  os: ubuntu-20.0.4
             
     runs-on: ${{ matrix.os }}
     steps:
