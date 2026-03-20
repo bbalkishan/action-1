@@ -24,17 +24,17 @@ jobs:
       - name: Send Tenant Email via Python
         env:
           # Template Variables
-          TENANT_NAME: "Acme Financial" 
+          TENANT_NAME: "X" 
           ENVIRONMENT: "Production"
           IMAGE_TAG: ${{ github.sha }}
-          RECIPIENT_EMAIL: "ops@acmefinancial.com"
+          RECIPIENT_EMAIL: "x@y.com"
           
           # SMTP Configuration & Secrets
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }} # Usually 587 for TLS
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-          SENDER_EMAIL: "sre-automation@yourdomain.com"
+          SENDER_EMAIL: "sre-team.x.com"
           
         run: |
           python scripts/send_email.py templates/tenant_email.html
