@@ -2,7 +2,7 @@ name: Post-Patching Tenant Email Notification
 
 on:
   workflow_run:
-    workflows: ["Patch and Deploy Containers"] 
+    workflows: ["generate-ascii-artwork"] 
     types:
       - completed
 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; color: #333; }
+        .container { padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        .header { color: #28a745; font-size: 20px; font-weight: bold; margin-bottom: 15px; }
+        .details { margin-top: 20px; background-color: #f9f9f9; padding: 10px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Patching & Deployment Successful 🚀</div>
+        <p>Hello <strong>$TENANT_NAME</strong>,</p>
+        <p>Maintenance is complete. New containers have been successfully provisioned from the latest patched image and are now serving traffic.</p>
+        
+        <div class="details">
+            <p><strong>Environment:</strong> $ENVIRONMENT</p>
+            <p><strong>Image Tag:</strong> $IMAGE_TAG</p>
+        </div>
+        
+        <p><small>Cloud SRE Automation</small></p>
+    </div>
+</body>
+</html>
