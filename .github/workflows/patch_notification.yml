@@ -27,7 +27,7 @@ jobs:
           TENANT_NAME: "X" 
           ENVIRONMENT: "Production"
           IMAGE_TAG: ${{ github.sha }}
-          RECIPIENT_EMAIL: "x@y.com"
+          RECIPIENT_EMAIL: "balkishan1206.com"
           
           # SMTP Configuration & Secrets
           SMTP_SERVER: smtp.gmail.com
