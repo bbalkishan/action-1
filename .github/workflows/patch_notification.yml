@@ -30,11 +30,11 @@ jobs:
           RECIPIENT_EMAIL: "x@y.com"
           
           # SMTP Configuration & Secrets
-          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }} # Usually 587 for TLS
-          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-          SENDER_EMAIL: "sre-team.x.com"
+          SMTP_SERVER: smtp.gmail.com
+          SMTP_PORT: 587 # Usually 587 for TLS
+          SMTP_USERNAME: balkishan108@gmail.com
+          SMTP_PASSWORD: xcpf ygbo umau chgr
+          SENDER_EMAIL: "balkishan108@gmail.com"
           
         run: |
           python scripts/send_email.py templates/tenant_email.html
